@@ -1,0 +1,17 @@
+{{ "<!-- Hero -->" | safeHTML }}
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">{{ with .Site.Params.hero.title }}{{ . | markdownify }}{{ end }}</div>
+      <div class="intro-heading">{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</div>
+      <a href="#portfolio" class="page-scroll btn btn-xl">{{ with .Site.Params.hero.buttonText }}{{ . }}{{ end }}</a>
+    </div>
+  </div>
+  {{/*  <div class="container">
+    <div class="row">
+      <div class="col">
+          {{< gallery dir="/img/portfolio/" thumb="-preview" />}}
+      </div>
+    </div>
+  </div>  */}}
+</header>
